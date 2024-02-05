@@ -18,10 +18,11 @@ public class BankServiceImpl implements BankService{
 
     @Override
     public Account createAccount(Account newAccount)throws AccountCreationException {
-        // handle account null exception
-        if(newAccount == null) throw new AccountCreationException("Account can't be null");
-        this.accountMap.put(newAccount.getId(), newAccount);
-        return this.accountMap.get(newAccount.getId());
+//        // handle account null exception
+//        if(newAccount == null) throw new AccountCreationException("Account can't be null");
+//        this.accountMap.put(newAccount.getId(), newAccount);
+//        return this.accountMap.get(newAccount.getId());
+        return null;
     }
     @Override
     public Collection<Account> getAllAccounts() {
@@ -32,9 +33,10 @@ public class BankServiceImpl implements BankService{
     public Account getAccountById(Integer accountId)throws AccountException {
         if(accountId == null)
             throw new AccountException("Account id can't be null.");
-        if( ! this.accountMap.containsKey(accountId))
-            throw new AccountException("Account id :"+ accountId +" does not exists.");
-        return this.accountMap.get(accountId);
+//        if( ! this.accountMap.containsKey(accountId))
+//            throw new AccountException("Account id :"+ accountId +" does not exists.");
+              return this.accountMap.get(accountId);
+
     }
 
 
